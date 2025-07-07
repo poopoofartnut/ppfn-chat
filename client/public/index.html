@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-app">
+        <header id="main-header">
+            <span class="logo">💬 Chat App</span>
+            <button id="logout-btn">Logout</button>
+        </header>
+        <div id="auth-container">
+            <form id="signup-form" autocomplete="off">
+                <h3>Sign Up</h3>
+                <input type="text" name="signup-username" placeholder="Username" required maxlength="20" />
+                <input type="password" name="signup-password" placeholder="Password" required minlength="4" maxlength="64" />
+                <button type="submit">Sign Up</button>
+            </form>
+            <form id="signin-form" autocomplete="off">
+                <h3>Sign In</h3>
+                <input type="text" name="signin-username" placeholder="Username" required maxlength="20" />
+                <input type="password" name="signin-password" placeholder="Password" required minlength="4" maxlength="64" />
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div id="chat-container">
+            <div id="account-info"></div>
+            <div id="chat-flex">
+                <aside id="sidebar">
+                    <h4>Open Chats</h4>
+                    <ul id="open-chats"></ul>
+                </aside>
+                <main id="main-chat">
+                    <div id="chat-header">
+                        <div id="chat-title"></div>
+                        <div id="chat-participants"></div>
+                    </div>
+                    <div id="user-bar">
+                        <input type="text" id="username-input" autocomplete="off" placeholder="Your name..." maxlength="20" required readonly />
+                        <input type="text" id="chatwith-input" autocomplete="off" placeholder="Usernames (comma separated)" maxlength="256" required />
+                        <button type="button" id="start-chat-btn">Start Chat</button>
+                    </div>
+                    <div id="messages"></div>
+                    <form id="chat-form" autocomplete="off">
+                        <input type="text" id="message-input" autocomplete="off" placeholder="Type a message..." required maxlength="200" />
+                        <button type="submit" id="send-btn" disabled>Send</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
